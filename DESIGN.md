@@ -1,52 +1,39 @@
-# Beacon Design System — gpt-taste Revamp
+# Beacon — gpt-taste Design Plan
 
-## Scope
-Preserve the existing Beacon landing-page structure and section order. No new sections are introduced. The revamp focuses on motion engineering: stronger GSAP interactions, scroll choreography, hover physics, and reliable initialization.
+## Pre-flight
 
-## Deterministic pre-flight
-Prompt character count: 174. Seed: `174`.
+Deterministic seed: `421` (character count of the supplied design request).
 
 ```python
-seed = 174
-random.seed(seed)
-hero = "Cinematic Center"
-font = "Geist"
+seed = 421
+hero = "Artistic Asymmetry"
+type_stack = "Outfit"
 components = ["Inline Typography Images", "Horizontal Accordions", "Infinite Marquee"]
 motion = ["Scroll Pinning (GSAP Split)", "Card Stacking"]
 ```
 
-The existing component and section structure is preserved. The selected component patterns are expressed as micro-treatments within existing surfaces rather than adding sections.
+The existing landing-page chapter order is preserved. The visual system is reswamped rather than replacing the information architecture.
 
 ## AIDA check
 
-- Navigation: floating glass Beacon navigation.
-- Attention: centered hero with wide headline, two CTAs, and dashboard visual.
-- Interest: existing feature/bento section.
-- Desire: existing dark story section with pinned title, stacked story cards, and scrubbed narrative.
-- Action: existing waitlist CTA and footer.
+- Navigation: floating glass navigation with a high-contrast waitlist action.
+- Attention: cinematic photographic hero, wide editorial headline, two CTAs, animated analytics dashboard.
+- Interest: dense 12-column product grid with retention, image-led context, heatmap, cross-platform orbit, sponsor report, and episode comparison.
+- Desire: pinned story narrative, image scale/fade, stacked cards, and scrubbed explanatory copy.
+- Action: oversized lime waitlist chapter and minimal footer.
 
 ## Hero math
 
-The existing hero headline remains `max-width: 72rem`, with `clamp(3rem, 6.3vw, 6.5rem)` and balanced wrapping. No stamp icons or spam tags are introduced.
+H1 width: `min(1150px, 100%)` with `clamp(4rem, 8vw, 8.6rem)` and `.88` line-height. The headline is intentionally wide so it remains a 2–3 line editorial composition instead of a narrow SaaS text wall. No hero stamp icons or spam tags are used.
 
 ## Bento density
 
-Desktop grid remains 12 columns with dense flow. `7 + 5 = 12`, `4 + 8 = 12`, and `5 + 7 = 12`; `grid-auto-flow: dense` remains enabled.
+Desktop columns = 12. Card spans are `7 + 5 = 12`, `5 + 7 = 12`, and `7 + 5 = 12`; the grid uses dense auto-flow. Every row is intentionally filled with no dead grid cell.
 
-## Motion engineering
+## Motion direction
 
-- Hero entrance timeline with staggered heading, copy, CTA and dashboard reveal.
-- Dashboard retention curve draw animation and scroll-linked float.
-- Animated chart cursor and subtle hero grid drift.
-- Bento scroll reveals, heatmap cell sequencing, and retention curve drawing.
-- Card magnetic hover physics and highlight sweeps.
-- Platform orbit micro-motion and sponsor-report treatment.
-- Desktop pinned story title and progressive story-card stacking.
-- Story imagery scale/fade treatment through the viewport.
-- Word-by-word scrubbed narrative reveal.
-- Reduced-motion fallback and ScrollTrigger refresh.
-- Desktop pinning is disabled below 901px to prevent mobile collisions.
+Motion is choreographic rather than constant: hero staging, dashboard curve draw, ambient glow drift, bento reveal, heatmap sequencing, comparison-bar growth, pinned story title, image scale/fade, card stacking, and word-by-word narrative scrub. Reduced-motion users receive a calmer static presentation.
 
-## Label and contrast sweep
+## Asset direction
 
-No cheap meta-labels such as `SECTION 01` or `QUESTION 05` are introduced. Existing descriptive feature labels remain because they identify the product capability itself. CTA text uses high-contrast foreground/background pairs.
+Stock imagery is contextual and editorial: podcast studio, listener/headphones, and report/workspace scenes. Images are desaturated and layered with gradients so they support the analytics product rather than becoming decorative stock-photo blocks.
